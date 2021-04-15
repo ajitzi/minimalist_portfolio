@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Bookmark project</title>
 </head>
 
@@ -22,7 +22,11 @@
 
     <main>
         <section>
-            <img src="img/portfolio/bookmark-page/porto/porto.png" alt="Visualisation du projet Bookmark" srcset="img/portfolio/bookmark-page/porto/porto@2x.png 2x">
+            <picture>
+                <source media="(max-width: 767px)" srcset="images/detail/mobile/image-bookmark-hero.jpg, images/detail/mobile/image-bookmark-hero@2x.jpg 2x">
+                <source media="(max-width: 1199px)" srcset="images/detail/tablet/image-bookmark-hero.jpg, images/detail/tablet/image-bookmark-hero@2x.jpg 2x">
+                <img src="images/detail/desktop/image-bookmark-hero.jpg" alt="Visualisation du projet bookmark" srcset="images/detail/desktop/image-bookmark-hero@2x.jpg 2x">
+            </picture>
             <h1>Manage</h1>
             <p>
                 This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
@@ -46,8 +50,16 @@
 
         <section>
             <h2>Static previews</h2>
-            <img src="img/portfolio/bookmark-page/static1/static1.png" alt="Visualisation du projet sur desktop" srcset="img/portfolio/bookmark-page/static1/static1@2x.png 2x">
-            <img src="img/portfolio/bookmark-page/static2/static2.png" alt="Visualisation du projet sur mobile" srcset="img/portfolio/bookmark-page/static2/static2@2x.png 2x">
+            <picture>
+                <source media="(max-width: 767px)" srcset="images/detail/mobile/image-bookmark-preview-1.jpg, images/detail/mobile/image-bookmark-preview-1@2x.jpg 2x">
+                <source media="(max-width: 1199px)" srcset="images/detail/tablet/image-bookmark-preview-1.jpg, images/detail/tablet/image-bookmark-preview-1@2x.jpg 2x">
+                <img src="images/detail/desktop/image-bookmark-preview-1.jpg" alt="Visualisation du projet sur desktop" srcset="images/detail/desktop/image-bookmark-preview-1@2x.jpg 2x">
+            </picture>
+            <picture>
+                <source media="(max-width: 767px)" srcset="images/detail/mobile/image-bookmark-preview-2.jpg, images/detail/mobile/image-bookmark-preview-2@2x.jpg 2x">
+                <source media="(max-width: 1199px)" srcset="images/detail/tablet/image-bookmark-preview-2.jpg, images/detail/tablet/image-bookmark-preview-2@2x.jpg 2x">
+                <img src="images/detail/desktop/image-bookmark-preview-2.jpg" alt="Visualisation du projet sur mobile" srcset="images/detail/desktop/image-bookmark-preview-2@2x.jpg 2x">
+            </picture>
         </section>
 
         <nav>

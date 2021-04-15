@@ -1,0 +1,123 @@
+/* Fonts */
+
+
+/* ibarra-real-nova-regular - latin */
+
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../fonts/ibarra-real-nova-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/ibarra-real-nova-v8-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* ibarra-real-nova-700 - latin */
+
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('../fonts/ibarra-real-nova-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/ibarra-real-nova-v8-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* public-sans-regular - latin */
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('../fonts/public-sans-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/public-sans-v5-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* public-sans-700 - latin */
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('../fonts/public-sans-v5-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/public-sans-v5-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* General */
+
+:root {
+    --primary: #5FB4A2;
+    --btn-1: #203A4C;
+    --primary-txt: #33323D;
+    --background: #FAFAFA;
+    --txt-field: #EAEAEB;
+    --errors: #F43030;
+}
+
+body {
+    color: var(--primary-txt);
+    font-family: "Public Sans", sans-serif;
+    background-color: var(--background);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1, 05;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 3.2rem;
+    line-height: 1.125;
+    font-weight: 400;
+}
+
+
+/* Boutons */
+
+.btn-primary {
+    display: flex;
+    width: 20rem;
+    height: 4.8rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--btn-1);
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.btn-primary img {
+    display: inline;
+    padding: 1.7rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary span {
+    width: 15.2rem;
+    font-size: 1.2rem;
+    line-height: calc(14/12);
+    text-align: center;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary);
+}

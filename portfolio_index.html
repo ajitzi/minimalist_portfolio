@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfolio index</title>
 </head>
 
@@ -23,7 +23,11 @@
     <main>
         <ul>
             <li>
-                <img src="img/portfolio/manage/manage.png" alt="Apperçu du projet manage" srcset="img/portfolio/manage/manage@2x.png 2x">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-manage.jpg, images/portfolio/mobile/image-portfolio-manage@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/portfolio/tablet/image-portfolio-manage.jpg, images/portfolio/tablet/image-portfolio-manage@2x.jpg 2x">
+                    <img src="images/portfolio/desktop/image-portfolio-manage.jpg" alt="Apperçu du projet Manage" srcset="images/portfolio/desktop/image-portfolio-manage@2x.jpg 2x">
+                </picture>
                 <h2>Manage</h2>
                 <p>
                     This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
@@ -31,28 +35,40 @@
                 <a href="manage.html">View project</a>
             </li>
             <li>
-                <img src="" alt="">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-bookmark.jpg, images/portfolio/mobile/image-portfolio-bookmark@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/portfolio/tablet/image-portfolio-bookmark.jpg, images/portfolio/tablet/image-portfolio-bookmark@2x.jpg 2x">
+                    <img src="images/portfolio/desktop/image-portfolio-bookmark.jpg" alt="Apperçu du projet Bookmark" srcset="images/portfolio/desktop/image-portfolio-bookmark@2x.jpg 2x">
+                </picture>
                 <h2>Bookmark</h2>
                 <p>
                     This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
                 </p>
-                <a href="#">View project</a>
+                <a href="bookmark.html">View project</a>
             </li>
             <li>
-                <img src="img/portfolio/insure/insure.png" alt="Apperçu du projet insure" srcset="img/portfolio/insure/insure@2x.png 2x">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-insure.jpg, images/portfolio/mobile/image-portfolio-insure@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/portfolio/tablet/image-portfolio-insure.jpg, images/portfolio/tablet/image-portfolio-insure@2x.jpg 2x">
+                    <img src="images/portfolio/desktop/image-portfolio-insure.jpg" alt="Apperçu du projet Insure" srcset="images/portfolio/desktop/image-portfolio-insure@2x.jpg 2x">
+                </picture>
                 <h2>Insure</h2>
                 <p>
                     This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.
                 </p>
-                <a href="#">View project</a>
+                <a href="insure.html">View project</a>
             </li>
             <li>
-                <img src="img/portfolio/fylo/fylo.png" alt="Apperçu du projet Fylo" srcset="img/portfolio/fylo/fylo@2x.png 2x">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="images/portfolio/mobile/image-portfolio-fylo.jpg, images/portfolio/mobile/image-portfolio-fylo@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/portfolio/tablet/image-portfolio-fylo.jpg, images/portfolio/tablet/image-portfolio-fylo@2x.jpg 2x">
+                    <img src="images/portfolio/desktop/image-portfolio-fylo.jpg" alt="Apperçu du projet Fylo" srcset="images/portfolio/desktop/image-portfolio-fylo@2x.jpg 2x">
+                </picture>
                 <h2>Fylo</h2>
                 <p>
                     This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.
                 </p>
-                <a href="#">View project</a>
+                <a href="fylo.html">View project</a>
             </li>
         </ul>
     </main>
