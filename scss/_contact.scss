@@ -1,0 +1,44 @@
+.contact {
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 8rem;
+}
+
+.form-contact {
+    label {
+        font-size: 1.3rem;
+        line-height: 2.3;
+        display: block;
+    }
+    input:not(.btn),
+    textarea {
+        width: 100%;
+        min-height: 4.8rem;
+        background-color: rgb(51, 50, 61, .1);
+        border: none;
+        padding: 1.6rem;
+    }
+    .btn {
+        margin-top: 2.4rem;
+    }
+}
+
+.touch {
+    margin-bottom: 3rem;
+    h2 {
+        margin-top: 3rem;
+    }
+    .social-list {
+        display: flex;
+        flex-direction: row;
+        width: 10rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+#name,
+#email {
+    margin-bottom: 3.2rem;
+}

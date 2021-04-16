@@ -1,0 +1,105 @@
+@import 'variables';
+.project-article {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    h1 {
+        margin-top: 2.9rem;
+        margin-bottom: 2.7rem;
+    }
+    .tags {
+        color: var(--primary);
+        font-size: 1.3rem;
+        line-height: calc(30/13);
+        margin-top: 2.5rem;
+        margin-bottom: 1.6rem;
+    }
+    a {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.project-picture {
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.project-info {
+    margin-bottom: 3.4rem;
+    h2 {
+        margin-bottom: 3.4rem;
+    }
+}
+
+.project-previews {
+    margin-bottom: 3.2rem;
+    h2 {
+        margin-bottom: 3.9rem;
+    }
+    picture {
+        padding-bottom: 3.2rem;
+    }
+}
+
+.project-nav {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6.8rem;
+}
+
+.project-nav-list {
+    display: flex;
+    justify-content: center;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    margin-bottom: 0;
+    border-top: 1px solid rgb(51, 50, 61, .1);
+    border-bottom: 1px solid rgb(51, 50, 61, .1);
+    li {
+        width: 100%;
+        @media screen and (min-width: 36em) {
+            width: $container-sm/2;
+        }
+        @media screen and (min-width: 48em) {
+            width: $container-md/2;
+        }
+        @media screen and (min-width: 62em) {
+            width: $container-lg/2;
+        }
+        @media screen and (min-width: 75em) {
+            width: $container-xl/2;
+        }
+    }
+    a {
+        text-decoration: none;
+        padding: 1rem;
+        color: var(--primary-txt);
+    }
+    img {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    p {
+        font-size: 3.2rem;
+        line-height: 1.125;
+        font-family: 'Ibarra Real Nova', serif;
+        opacity: 100%;
+        margin-bottom: 3rem;
+    }
+    span {
+        display: block;
+        font-family: "Public Sans", sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2;
+        opacity: 50%;
+    }
+    li:last-child {
+        text-align: right;
+        border-left: 1px solid rgb(51, 50, 61, .1);
+        img {
+            margin-left: auto;
+        }
+    }
+}

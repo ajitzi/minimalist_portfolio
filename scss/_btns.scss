@@ -1,0 +1,49 @@
+/* Boutons */
+
+.btn {
+    display: flex;
+    height: 4.8rem;
+    font-size: 1.2rem;
+    line-height: calc(14/12);
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    &-primary {
+        width: 20rem;
+        color: #fff;
+        background-color: var(--btn-1);
+        img {
+            display: inline;
+            padding: 1.7rem;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        span {
+            width: 15.2rem;
+            font-size: 1.2rem;
+            line-height: calc(14/12);
+            text-align: center;
+        }
+        &:hover,
+        &:focus {
+            background-color: var(--primary);
+        }
+    }
+    &-secondary {
+        display: inline-flex;
+        color: var(--primary-txt);
+        background-color: transparent;
+        border: 1px solid var(--primary-txt);
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+        vertical-align: middle;
+        &:hover,
+        &:focus {
+            color: var(--background);
+            background-color: var(--primary-txt);
+        }
+    }
+}
+
+input[type=submit] {
+    border: none;
+}

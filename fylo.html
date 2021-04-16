@@ -5,95 +5,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Fylo project</title>
 </head>
 
 <body>
     <header>
-        <img src="img/nav/double-fleches-dark.svg" alt="Logo portfolio">
-        <nav>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio_index.html" class="active">Portfolio</a></li>
-            <li><a href="contact.html">Contact me</a></li>
-        </nav>
+        <div class="container">
+            <img src="" alt="">
+            <nav>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio_index.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section>
-            <img src="img/portfolio/fylo-page/porto/porto.png" alt="Visualisation du projet Fylo" srcset="img/portfolio/fylo-page/porto/porto@2x.png 2x">
-            <h1>Fylo</h1>
-            <p>
-                This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
-            </p>
-            <p>
-                Interaction Design / Front End Development
-            </p>
-            <p>
-                HTML / CSS / JS
-            </p>
-            <a href="#">Visit website</a>
+            <div class="container">
+                <picture class="project-picture">
+                    <source media="(max-width: 767px)" srcset="images/detail/mobile/image-fylo-hero.jpg, images/detail/mobile/image-fylo-hero@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/detail/tablet/image-fylo-hero.jpg, images/detail/tablet/image-fylo-hero@2x.jpg 2x">
+                    <img src="images/detail/desktop/image-fylo-hero.jpg" alt="Visualisation du projet fylo" srcset="images/detail/desktop/image-fylo-hero@2x.jpg 2x">
+                </picture>
+                <article class="borders-y project-article">
+                    <h1>Fylo</h1>
+                    <p>
+                        This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
+                    </p>
+                    <div class="tags">
+                        <span>
+                            Interaction Design / Front End Development
+                        </span>
+                        <span>
+                            HTML / CSS / JS
+                        </span>
+                    </div>
+                    <a class="btn btn-secondary" href="#">Visit website</a>
+                </article>
+            </div>
         </section>
 
         <section>
-            <h2>Project background</h2>
-            <p>
-                This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different
-                screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.
-            </p>
+            <div class="container project-info">
+                <h2 class="h3">Project background</h2>
+                <p>
+                    This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different
+                    screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.
+                </p>
+            </div>
         </section>
 
         <section>
-            <h2>Static previews</h2>
-            <img src="img/portfolio/fylo-page/static1/static1.png" alt="Visualisation du projet sur desktop" srcset="img/portfolio/fylo-page/static1/static1@2x.png 2x">
-            <img src="img/portfolio/fylo-page/static2/static2.png" alt="Visualisation du projet sur mobile" srcset="img/portfolio/fylo-page/static2/static2@2x.png 2x">
+            <div class="container project-previews">
+                <h2 class="h3">Static previews</h2>
+                <picture class="project-picture">
+                    <source media="(max-width: 767px)" srcset="images/detail/mobile/image-fylo-preview-1.jpg, images/detail/mobile/image-fylo-preview-1@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/detail/tablet/image-fylo-preview-1.jpg, images/detail/tablet/image-fylo-preview-1@2x.jpg 2x">
+                    <img src="images/detail/desktop/image-fylo-preview-1.jpg" alt="Visualisation du projet sur desktop" srcset="images/detail/desktop/image-fylo-preview-1@2x.jpg 2x">
+                </picture>
+                <picture class="project-picture">
+                    <source media="(max-width: 767px)" srcset="images/detail/mobile/image-fylo-preview-2.jpg, images/detail/mobile/image-fylo-preview-2@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" srcset="images/detail/tablet/image-fylo-preview-2.jpg, images/detail/tablet/image-fylo-preview-2@2x.jpg 2x">
+                    <img src="images/detail/desktop/image-fylo-preview-2.jpg" alt="Visualisation du projet sur mobile" srcset="images/detail/desktop/image-fylo-preview-2@2x.jpg 2x">
+                </picture>
+            </div>
         </section>
 
-        <nav>
-            <a href="insure.html">
-                <img src="" alt="" aria-hidden="true">
-                <p>Insure <span>Previous project</span></p>
-            </a>
-            <a href="manage.html">
-                <img src="" alt="" aria-hidden="true">
-                <p>Manage <span>Next project</span></p>
-            </a>
+        <nav class="project-nav">
+            <ul class="container project-nav-list">
+                <li>
+                    <a href="insure.html">
+                        <img src="images/icons/arrow-left.svg" alt="" aria-hidden="true">
+                        <p>Insure <span>Previous project</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="manage.html">
+                        <img src="images/icons/arrow-right.svg" alt="" aria-hidden="true">
+                        <p>Manage <span>Next project</span></p>
+                    </a>
+                </li>
+            </ul>
         </nav>
 
     </main>
 
     <section class="contact">
-        <h2>Interested in doing a project together?</h2>
-        <a href="contact.html">Contact me</a>
+        <div class="container">
+            <h2>Interested in doing a project together?</h2>
+            <a class="btn btn-secondary" href="contact.html">Contact me</a>
+        </div>
     </section>
 
     <footer>
-        <img src="img/nav/double-fleches-light.svg" alt="Logo portfolio">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio_index.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <div class="container">
+            <img src="images/logo.svg" alt="Logo du portfolio">
+            <nav>
+                <ul class="footer-nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="portfolio_index.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <ul class="social-list">
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"><defs/><path fill="#fff" d="M12.5 0A12.4 12.4 0 000 12.3a12.32 12.32 0 008.55 11.68c.62.11.85-.27.85-.6 0-.28 0-1.06-.02-2.08-3.47.74-4.2-1.66-4.2-1.66a3.28 3.28 0 00-1.4-1.8c-1.13-.76.1-.74.1-.74a2.62 2.62 0 011.9 1.26 2.69 2.69 0 003.65 1.03 2.6 2.6 0 01.79-1.65c-2.78-.3-5.7-1.36-5.7-6.08a4.7 4.7 0 011.3-3.3 4.31 4.31 0 01.1-3.26s1.05-.33 3.44 1.26a11.96 11.96 0 016.25 0c2.37-1.58 3.42-1.26 3.42-1.26a4.43 4.43 0 01.13 3.26 4.72 4.72 0 011.28 3.3c0 4.72-2.93 5.76-5.7 6.07a2.92 2.92 0 01.84 2.27l-.02 3.37c0 .33.22.71.86.59A12.29 12.29 0 0025 12.3 12.4 12.4 0 0012.5 0z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs/><path fill="#fff" d="M21.6 24H2.4A2.4 2.4 0 010 21.6V2.4A2.4 2.4 0 012.4 0h19.2A2.4 2.4 0 0124 2.4v19.2a2.4 2.4 0 01-2.4 2.4zM15 12.24a1.848 1.848 0 011.8 1.8v6.36h3.6v-6.84a4.256 4.256 0 00-4.2-4.2 3.89 3.89 0 00-3 1.679V9.6H9.6v10.8h3.6v-6.36a1.848 1.848 0 011.8-1.8zM3.6 9.6v10.8h3.6V9.6zm1.8-6.36A2.16 2.16 0 107.56 5.4 2.162 2.162 0 005.4 3.24z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.504"><defs/><path fill="#fff" d="M24 2.309a9.831 9.831 0 01-2.828.775A4.932 4.932 0 0023.337.36a9.864 9.864 0 01-3.127 1.195 4.927 4.927 0 00-8.391 4.49A13.978 13.978 0 011.671.9a4.93 4.93 0 001.523 6.575 4.9 4.9 0 01-2.229-.616 4.927 4.927 0 003.949 4.89 4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.292 13.939 13.939 0 007.548 19.5 13.925 13.925 0 0021.543 4.858 10.025 10.025 0 0024 2.309z"/></svg>
+                    </a>
+                </li>
             </ul>
-        </nav>
-        <ul>
-            <li>
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"><defs/><path fill="#fff" d="M12.5 0A12.4 12.4 0 000 12.3a12.32 12.32 0 008.55 11.68c.62.11.85-.27.85-.6 0-.28 0-1.06-.02-2.08-3.47.74-4.2-1.66-4.2-1.66a3.28 3.28 0 00-1.4-1.8c-1.13-.76.1-.74.1-.74a2.62 2.62 0 011.9 1.26 2.69 2.69 0 003.65 1.03 2.6 2.6 0 01.79-1.65c-2.78-.3-5.7-1.36-5.7-6.08a4.7 4.7 0 011.3-3.3 4.31 4.31 0 01.1-3.26s1.05-.33 3.44 1.26a11.96 11.96 0 016.25 0c2.37-1.58 3.42-1.26 3.42-1.26a4.43 4.43 0 01.13 3.26 4.72 4.72 0 011.28 3.3c0 4.72-2.93 5.76-5.7 6.07a2.92 2.92 0 01.84 2.27l-.02 3.37c0 .33.22.71.86.59A12.29 12.29 0 0025 12.3 12.4 12.4 0 0012.5 0z"/></svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><defs/><path fill="#fff" d="M21.6 24H2.4A2.4 2.4 0 010 21.6V2.4A2.4 2.4 0 012.4 0h19.2A2.4 2.4 0 0124 2.4v19.2a2.4 2.4 0 01-2.4 2.4zM15 12.24a1.848 1.848 0 011.8 1.8v6.36h3.6v-6.84a4.256 4.256 0 00-4.2-4.2 3.89 3.89 0 00-3 1.679V9.6H9.6v10.8h3.6v-6.36a1.848 1.848 0 011.8-1.8zM3.6 9.6v10.8h3.6V9.6zm1.8-6.36A2.16 2.16 0 107.56 5.4 2.162 2.162 0 005.4 3.24z"/></svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.504"><defs/><path fill="#fff" d="M24 2.309a9.831 9.831 0 01-2.828.775A4.932 4.932 0 0023.337.36a9.864 9.864 0 01-3.127 1.195 4.927 4.927 0 00-8.391 4.49A13.978 13.978 0 011.671.9a4.93 4.93 0 001.523 6.575 4.9 4.9 0 01-2.229-.616 4.927 4.927 0 003.949 4.89 4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.292 13.939 13.939 0 007.548 19.5 13.925 13.925 0 0021.543 4.858 10.025 10.025 0 0024 2.309z"/></svg>
-                </a>
-            </li>
-        </ul>
+        </div>
     </footer>
 
 </body>

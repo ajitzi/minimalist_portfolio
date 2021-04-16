@@ -1,0 +1,37 @@
+.hero {
+    margin-bottom: 9.6rem;
+    &-pict {
+        margin-bottom: 2.8rem;
+    }
+    &-title {
+        margin-bottom: 2rem;
+    }
+}
+
+.about {
+    margin-top: 3.2rem;
+    margin-bottom: 11.9rem;
+    picture {
+        margin-bottom: 3.2rem;
+    }
+    h2 {
+        margin-top: 3.7rem;
+        margin-bottom: 2.2rem;
+    }
+    p {
+        font-size: 1.6rem;
+        margin-bottom: 1.8rem;
+    }
+    a {
+        margin-bottom: 5.2rem;
+    }
+}
+
+.contact {
+    text-align: center;
+    margin-bottom: 8rem;
+    h2 {
+        margin-bottom: 2.8rem;
+        line-height: 1.05;
+    }
+}

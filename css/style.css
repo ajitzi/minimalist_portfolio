@@ -1,123 +1,556 @@
 /* Fonts */
-
-
 /* ibarra-real-nova-regular - latin */
-
 @font-face {
-    font-family: 'Ibarra Real Nova';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''), url('../fonts/ibarra-real-nova-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/ibarra-real-nova-v8-latin-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/ibarra-real-nova-v8-latin-regular.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v8-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-
 /* ibarra-real-nova-700 - latin */
-
 @font-face {
-    font-family: 'Ibarra Real Nova';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''), url('../fonts/ibarra-real-nova-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/ibarra-real-nova-v8-latin-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/ibarra-real-nova-v8-latin-700.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v8-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-
 /* public-sans-regular - latin */
-
 @font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''), url('../fonts/public-sans-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/public-sans-v5-latin-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/public-sans-v5-latin-regular.woff2") format("woff2"), url("../fonts/public-sans-v5-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-
 /* public-sans-700 - latin */
-
 @font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''), url('../fonts/public-sans-v5-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/public-sans-v5-latin-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/public-sans-v5-latin-700.woff2") format("woff2"), url("../fonts/public-sans-v5-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Set root font-size @10px equivalent */
+html {
+  font-size: 0.625em;
+  /* fallback IE8+ */
+  font-size: calc( 1em * 0.625);
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+
+/* Remove focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set cursor pointer */
+label[for],
+button,
+input[type=submit],
+select {
+  cursor: pointer;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Print external URLs */
+@media print {
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]:not([href^="#"])::after {
+    content: "(" attr(href) ")";
+  }
+}
+/* Helper classes */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Image replacement technique 2012 H5BP  - https://css-tricks.com/the-image-replacement-museum/ */
+.ir {
+  font: 0/0 a;
+  color: transparent;
+  border: 0;
+  text-shadow: none;
+}
 
 /* General */
-
 :root {
-    --primary: #5FB4A2;
-    --btn-1: #203A4C;
-    --primary-txt: #33323D;
-    --background: #FAFAFA;
-    --txt-field: #EAEAEB;
-    --errors: #F43030;
+  --primary: #5FB4A2;
+  --btn-1: #203A4C;
+  --primary-txt: #33323d;
+  --background: #FAFAFA;
+  --txt-field: #EAEAEB;
+  --errors: #F43030;
 }
 
 body {
-    color: var(--primary-txt);
-    font-family: "Public Sans", sans-serif;
-    background-color: var(--background);
+  position: relative;
+  min-height: 100vh;
+  color: var(--primary-txt);
+  font-family: "Public Sans", sans-serif;
+  background-color: var(--background);
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+}
+@media screen and (min-width: 36em) {
+  .container {
+    max-width: 51.2rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .container {
+    max-width: 68.8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 62em) {
+  .container {
+    max-width: 91.2rem;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 75em) {
+  .container {
+    max-width: 112rem;
+  }
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
 }
 
 h1 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+}
+@media screen and (min-width: 75em) {
+  h1 {
     font-size: 5rem;
-    line-height: 1;
-    font-weight: 700;
+  }
 }
 
-h2 {
-    font-size: 4rem;
-    line-height: 1, 05;
-    font-weight: 700;
+h2,
+.h2 {
+  font-size: 4rem;
+  line-height: 1, 5;
+  font-weight: 700;
 }
 
-h3 {
-    font-size: 3.2rem;
-    line-height: 1.125;
-    font-weight: 400;
+h3,
+.h3 {
+  font-size: 3.2rem;
+  line-height: 1.125;
+  font-weight: 400;
 }
 
+p {
+  opacity: 80%;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.borders-y {
+  border-top: solid 1px rgba(51, 50, 61, 0.15);
+  border-bottom: solid 1px rgba(51, 50, 61, 0.15);
+}
 
 /* Boutons */
-
+.btn {
+  display: flex;
+  height: 4.8rem;
+  font-size: 1.2rem;
+  line-height: calc(14/12);
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+}
 .btn-primary {
-    display: flex;
-    width: 20rem;
-    height: 4.8rem;
-    color: #fff;
-    text-decoration: none;
-    background-color: var(--btn-1);
-    text-transform: uppercase;
-    align-items: center;
+  width: 20rem;
+  color: #fff;
+  background-color: var(--btn-1);
 }
-
 .btn-primary img {
-    display: inline;
-    padding: 1.7rem;
-    background-color: rgba(0, 0, 0, 0.1);
+  display: inline;
+  padding: 1.7rem;
+  background-color: rgba(0, 0, 0, 0.1);
 }
-
 .btn-primary span {
-    width: 15.2rem;
-    font-size: 1.2rem;
-    line-height: calc(14/12);
-    text-align: center;
+  width: 15.2rem;
+  font-size: 1.2rem;
+  line-height: calc(14/12);
+  text-align: center;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary);
+}
+.btn-secondary {
+  display: inline-flex;
+  color: var(--primary-txt);
+  background-color: transparent;
+  border: 1px solid var(--primary-txt);
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  vertical-align: middle;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  color: var(--background);
+  background-color: var(--primary-txt);
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: var(--primary);
+input[type=submit] {
+  border: none;
 }
+
+.hero {
+  margin-bottom: 9.6rem;
+}
+.hero-pict {
+  margin-bottom: 2.8rem;
+}
+.hero-title {
+  margin-bottom: 2rem;
+}
+
+.about {
+  margin-top: 3.2rem;
+  margin-bottom: 11.9rem;
+}
+.about picture {
+  margin-bottom: 3.2rem;
+}
+.about h2 {
+  margin-top: 3.7rem;
+  margin-bottom: 2.2rem;
+}
+.about p {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+.about a {
+  margin-bottom: 5.2rem;
+}
+
+.contact {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.contact h2 {
+  margin-bottom: 2.8rem;
+  line-height: 1.05;
+}
+
+.projects-list .borders-y {
+  margin-top: 3.2rem;
+  margin-bottom: 7.6rem;
+}
+.projects-list .borders-y h2 {
+  margin-top: 2.9rem;
+}
+.projects-list .borders-y a {
+  margin-top: 1.7rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-article {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+.project-article h1 {
+  margin-top: 2.9rem;
+  margin-bottom: 2.7rem;
+}
+.project-article .tags {
+  color: var(--primary);
+  font-size: 1.3rem;
+  line-height: calc(30/13);
+  margin-top: 2.5rem;
+  margin-bottom: 1.6rem;
+}
+.project-article a {
+  margin-bottom: 2.5rem;
+}
+
+.project-picture img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-info {
+  margin-bottom: 3.4rem;
+}
+.project-info h2 {
+  margin-bottom: 3.4rem;
+}
+
+.project-previews {
+  margin-bottom: 3.2rem;
+}
+.project-previews h2 {
+  margin-bottom: 3.9rem;
+}
+.project-previews picture {
+  padding-bottom: 3.2rem;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 6.8rem;
+}
+
+.project-nav-list {
+  display: flex;
+  justify-content: center;
+  margin-left: 3.2rem;
+  margin-right: 3.2rem;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(51, 50, 61, 0.1);
+  border-bottom: 1px solid rgba(51, 50, 61, 0.1);
+}
+.project-nav-list li {
+  width: 100%;
+}
+@media screen and (min-width: 36em) {
+  .project-nav-list li {
+    width: 25.6rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .project-nav-list li {
+    width: 34.4rem;
+  }
+}
+@media screen and (min-width: 62em) {
+  .project-nav-list li {
+    width: 45.6rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .project-nav-list li {
+    width: 56rem;
+  }
+}
+.project-nav-list a {
+  text-decoration: none;
+  padding: 1rem;
+  color: var(--primary-txt);
+}
+.project-nav-list img {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.project-nav-list p {
+  font-size: 3.2rem;
+  line-height: 1.125;
+  font-family: "Ibarra Real Nova", serif;
+  opacity: 100%;
+  margin-bottom: 3rem;
+}
+.project-nav-list span {
+  display: block;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2;
+  opacity: 50%;
+}
+.project-nav-list li:last-child {
+  text-align: right;
+  border-left: 1px solid rgba(51, 50, 61, 0.1);
+}
+.project-nav-list li:last-child img {
+  margin-left: auto;
+}
+
+.contact {
+  text-align: left;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 8rem;
+}
+
+.form-contact label {
+  font-size: 1.3rem;
+  line-height: 2.3;
+  display: block;
+}
+.form-contact input:not(.btn),
+.form-contact textarea {
+  width: 100%;
+  min-height: 4.8rem;
+  background-color: rgba(51, 50, 61, 0.1);
+  border: none;
+  padding: 1.6rem;
+}
+.form-contact .btn {
+  margin-top: 2.4rem;
+}
+
+.touch {
+  margin-bottom: 3rem;
+}
+.touch h2 {
+  margin-top: 3rem;
+}
+.touch .social-list {
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#name,
+#email {
+  margin-bottom: 3.2rem;
+}
+
+body > footer {
+  width: 100%;
+  position: absolute;
+  background-color: var(--primary-txt);
+}
+body > footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body > footer img {
+  filter: brightness(100);
+  width: 6rem;
+  height: 3.2rem;
+  margin-bottom: 4.2rem;
+  margin-top: 5.6rem;
+}
+body > footer .footer-nav-list {
+  display: flex;
+  width: 10rem;
+  flex-direction: column;
+  text-align: center;
+}
+body > footer .footer-nav-list li {
+  display: flex;
+  flex-direction: column;
+}
+body > footer .footer-nav-list li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem;
+}
+body > footer .social-list {
+  display: flex;
+  width: 10rem;
+  flex-direction: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.6rem;
+  margin-bottom: 5.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */
