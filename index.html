@@ -15,12 +15,22 @@
         <div class="container">
             <img src="images/logo.svg" alt="Logo portfolio">
             <nav>
-                <button aria-expanded="false" aria-controls="menu" class="toggle-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="13"><g fill="#33323D" fill-rule="evenodd"><path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z"/></g></svg>
+                <button aria-expanded="false" aria-controls="Menu" class="toggle-menu">
+                    <div class="menu-icon is-closed" aria-label="Menu">
+                        <span></span>
+                    </div>
                 </button>
-                <ul class="main-nav" id="menu">
+                <ul class="main-nav" id="menu" hidden>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="portfolio_index.html">Portfolio</a></li>
+                    <li class="portfolio-list">
+                        <a href="portfolio_index.html">Portfolio</a>
+                        <ul class="portfolio-nav">
+                            <li><a href="manage.html">Manage</a></li>
+                            <li><a href="bookmark.html">Bookmark</a></li>
+                            <li><a href="insure.html">Insure</a></li>
+                            <li><a href="fylo.html">Fylo</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact me</a></li>
                 </ul>
             </nav>
@@ -36,11 +46,20 @@
                     <img src="images/homepage/desktop/image-homepage-hero.jpg" alt="Photo d'un ordinateur" srcset="images/homepage/desktop/image-homepage-hero@2x.jpg 2x">
                 </picture>
                 <h1 class="hero-title">Hey, I'm Alex Spencer and I love building beautiful websites</h1>
-                <a href="#" class="btn btn-primary"><img src="images/icons/down-arrows.svg" alt="" aria-hidden="true"><span>About me</span></a>
+                <a id="btn" onmouseover="mouseOver()" onmouseout="mouseOut()" href="#about" class="btn btn-primary"><img id="btnImg" src="images/icons/down-arrows.svg" alt="" aria-hidden="true"><span>About me</span></a>
+                <script>
+                    function mouseOver() {
+                        document.getElementById("btnImg").setAttribute('src', 'images/icons/down-arrows-white.svg');
+                    }
+
+                    function mouseOut() {
+                        document.getElementById("btnImg").setAttribute('src', 'images/icons/down-arrows.svg');
+                    }
+                </script>
             </div>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
             <div class="container">
                 <picture>
                     <source media="(max-width: 767px)" srcset="images/homepage/mobile/image-homepage-profile.jpg, images/homepage/mobile/image-homepage-profile@2x.jpg 2x">
@@ -60,9 +79,11 @@
         </section>
     </main>
 
-    <section class="container contact">
-        <h2>Interested in doing a project together?</h2>
-        <a class="btn btn-secondary" href="contact.html">Contact me</a>
+    <section class="contact">
+        <div class="container">
+            <h2>Interested in doing a project together?</h2>
+            <a class="btn btn-secondary" href="contact.html">Contact me</a>
+        </div>
     </section>
 
     <footer>

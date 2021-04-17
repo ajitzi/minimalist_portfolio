@@ -10,6 +10,16 @@
     --errors: #F43030;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     position: relative;
     min-height: 100vh;

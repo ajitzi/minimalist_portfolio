@@ -15,12 +15,22 @@
         <div class="container">
             <img src="images/logo.svg" alt="Logo portfolio">
             <nav>
-                <button aria-expanded="false" aria-controls="menu" class="toggle-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="13"><g fill="#33323D" fill-rule="evenodd"><path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z"/></g></svg>
+                <button aria-expanded="false" aria-controls="Menu" class="toggle-menu">
+                    <div class="menu-icon is-closed" aria-label="Menu">
+                        <span></span>
+                    </div>
                 </button>
-                <ul class="main-nav" id="menu">
+                <ul class="main-nav" id="menu" hidden>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio_index.html">Portfolio</a></li>
+                    <li class="portfolio-list">
+                        <a href="portfolio_index.html">Portfolio</a>
+                        <ul class="portfolio-nav">
+                            <li><a href="manage.html">Manage</a></li>
+                            <li><a href="bookmark.html">Bookmark</a></li>
+                            <li><a href="insure.html">Insure</a></li>
+                            <li><a href="fylo.html">Fylo</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#" class="active">Contact me</a></li>
                 </ul>
             </nav>
@@ -76,9 +86,9 @@
             <img src="images/logo.svg" alt="Logo du portfolio">
             <nav>
                 <ul class="footer-nav-list">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="portfolio_index.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <ul class="social-list">

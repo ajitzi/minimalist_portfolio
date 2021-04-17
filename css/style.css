@@ -179,6 +179,15 @@ address {
   --errors: #F43030;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 body {
   position: relative;
   min-height: 100vh;
@@ -306,6 +315,175 @@ input[type=submit] {
   border: none;
 }
 
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 3.2rem;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+.main-header .container img {
+  width: 6rem;
+  height: 3.2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.main-header nav {
+  position: relative;
+}
+.main-header button {
+  background-color: transparent;
+  border: none;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-evenly;
+  top: 3.5rem;
+  right: -1rem;
+  background-color: var(--primary-txt);
+  text-align: center;
+  width: 23.3rem;
+  height: 18.6rem;
+}
+.main-nav a {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: calc(14/16);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.6rem;
+}
+.main-nav .active {
+  color: var(--primary);
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: #fff;
+  color: var(--primary-txt);
+  transition: 0.3s;
+}
+
+.portfolio-nav {
+  display: none;
+}
+
+[hidden] {
+  visibility: hidden;
+}
+
+.menu-icon {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  transition: transform 0.5s;
+}
+
+.menu-icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  color: black;
+  width: 22px;
+  height: 2px;
+  background-color: var(--primary-txt);
+  transition: background 0.5s;
+}
+
+.menu-icon span::before,
+.menu-icon span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-6px);
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--primary-txt);
+  transition: transform 0.5s;
+}
+
+.menu-icon span::after {
+  transform: translateY(6px);
+}
+
+.menu-icon.is-opened span {
+  background: transparent;
+}
+
+.menu-icon.is-opened span::before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.menu-icon.is-opened span::after {
+  transform: translateY(0) rotate(45deg);
+}
+
+@media screen and (min-width: 48em) {
+  .toggle-menu {
+    display: none;
+  }
+
+  .main-nav {
+    position: initial;
+    background: none;
+    color: black;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+  }
+  .main-nav a {
+    color: var(--primary-txt);
+  }
+  .main-nav a:hover,
+.main-nav a:focus {
+    color: var(--background);
+    background-color: var(--primary-txt);
+  }
+
+  .portfolio-list {
+    position: relative;
+  }
+
+  .portfolio-nav {
+    position: absolute;
+    display: flex;
+    left: 5rem;
+    top: 2rem;
+    transform: translateX(-50%);
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+    background-color: var(--primary-txt);
+    width: 20rem;
+    min-height: 20rem;
+  }
+  .portfolio-nav a {
+    color: var(--primary);
+  }
+  .portfolio-nav a:hover,
+.portfolio-nav a:focus {
+    color: var(--background);
+    background: none;
+  }
+
+  .portfolio-nav {
+    display: none;
+  }
+
+  .portfolio-list:hover .portfolio-nav {
+    display: flex;
+  }
+
+  [hidden] {
+    visibility: visible;
+  }
+}
 .hero {
   margin-bottom: 9.6rem;
 }
@@ -486,6 +664,9 @@ input[type=submit] {
   background-color: rgba(51, 50, 61, 0.1);
   border: none;
   padding: 1.6rem;
+}
+.form-contact textarea {
+  min-height: 9.6rem;
 }
 .form-contact .btn {
   margin-top: 2.4rem;
