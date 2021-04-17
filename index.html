@@ -11,11 +11,14 @@
 
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container">
-            <img src="img/nav/double-fleches-dark.svg" alt="Logo portfolio">
+            <img src="images/logo.svg" alt="Logo portfolio">
             <nav>
-                <ul class="main-nav-list">
+                <button aria-expanded="false" aria-controls="menu" class="toggle-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="13"><g fill="#33323D" fill-rule="evenodd"><path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z"/></g></svg>
+                </button>
+                <ul class="main-nav" id="menu">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="portfolio_index.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact me</a></li>
@@ -91,6 +94,7 @@
             </ul>
         </div>
     </footer>
+    <script src="script/menu_burger.js"></script>
 </body>
 
 </html>
