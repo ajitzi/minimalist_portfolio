@@ -35,3 +35,43 @@
         line-height: 1.05;
     }
 }
+
+@media screen and (min-width: 48em) {
+    .hero {
+        .container {
+            position: relative;
+        }
+        &-pict {
+            z-index: -10;
+        }
+        &-group {
+            background-color: var(--background);
+            min-height: 27.8rem;
+            min-width: 51.4rem;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(0%);
+        }
+        &-title {
+            position: absolute;
+            padding-right: 5.6rem;
+            bottom: 8.4rem;
+        }
+        a {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .about {
+        .container {
+            display: flex;
+        }
+        picture {
+            flex-shrink: 0;
+            margin-right: 6.9rem;
+        }
+        a {
+            margin-bottom: 0;
+        }
+    }
+}

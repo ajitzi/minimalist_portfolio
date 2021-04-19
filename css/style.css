@@ -206,13 +206,12 @@ body {
 @media screen and (min-width: 36em) {
   .container {
     max-width: 51.2rem;
+    padding: 0;
   }
 }
 @media screen and (min-width: 48em) {
   .container {
     max-width: 68.8rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
 }
 @media screen and (min-width: 48em) and (min-width: 62em) {
@@ -276,6 +275,7 @@ p {
   line-height: calc(14/12);
   text-decoration: none;
   text-transform: uppercase;
+  justify-content: center;
   align-items: center;
 }
 .btn-primary {
@@ -522,6 +522,42 @@ input[type=submit] {
   line-height: 1.05;
 }
 
+@media screen and (min-width: 48em) {
+  .hero .container {
+    position: relative;
+  }
+  .hero-pict {
+    z-index: -10;
+  }
+  .hero-group {
+    background-color: var(--background);
+    min-height: 27.8rem;
+    min-width: 51.4rem;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(0%);
+  }
+  .hero-title {
+    position: absolute;
+    padding-right: 5.6rem;
+    bottom: 8.4rem;
+  }
+  .hero a {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .about .container {
+    display: flex;
+  }
+  .about picture {
+    flex-shrink: 0;
+    margin-right: 6.9rem;
+  }
+  .about a {
+    margin-bottom: 0;
+  }
+}
 .projects-list .borders-y {
   margin-top: 3.2rem;
   margin-bottom: 7.6rem;

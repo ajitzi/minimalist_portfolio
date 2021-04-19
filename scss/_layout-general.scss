@@ -36,11 +36,12 @@ body {
     padding-right: 3.2rem;
     @media screen and (min-width: 36em) {
         max-width: $container-sm;
+        padding: 0;
     }
     @media screen and (min-width: 48em) {
         max-width: $container-md;
-        padding-left: 4rem;
-        padding-right: 4rem;
+        // padding-left: 4rem;
+        // padding-right: 4rem;
         @media screen and (min-width: 62em) {
             max-width: $container-lg;
         }

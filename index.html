@@ -45,8 +45,10 @@
                     <source media="(max-width: 1199px)" srcset="images/homepage/tablet/image-homepage-hero.jpg, images/homepage/tablet/image-homepage-hero@2x.jpg 2x">
                     <img src="images/homepage/desktop/image-homepage-hero.jpg" alt="Photo d'un ordinateur" srcset="images/homepage/desktop/image-homepage-hero@2x.jpg 2x">
                 </picture>
-                <h1 class="hero-title">Hey, I'm Alex Spencer and I love building beautiful websites</h1>
-                <a id="btn" onmouseover="mouseOver()" onmouseout="mouseOut()" href="#about" class="btn btn-primary"><img id="btnImg" src="images/icons/down-arrows.svg" alt="" aria-hidden="true"><span>About me</span></a>
+                <div class="hero-group">
+                    <h1 class="hero-title">Hey, I'm Alex Spencer and I love building beautiful websites</h1>
+                    <a id="btn" onmouseover="mouseOver()" onmouseout="mouseOut()" href="#about" class="btn btn-primary"><img id="btnImg" src="images/icons/down-arrows.svg" alt="" aria-hidden="true"><span>About me</span></a>
+                </div>
                 <script>
                     function mouseOver() {
                         document.getElementById("btnImg").setAttribute('src', 'images/icons/down-arrows-white.svg');
